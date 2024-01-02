@@ -23,5 +23,9 @@ sequenceDiagram
     server-->>browser: This is a url redirect
     deactivate server
 
-    
+    browser->>server: The code on server is responsible for POST request
+    activate server
+    server-->>browser: Data is sent as body of the POST request
+    deactivate server
+
 ```
