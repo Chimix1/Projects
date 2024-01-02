@@ -3,17 +3,25 @@ sequenceDiagram
     participant browser
     participant server
 
-    
-
-    
-
-    box->>clicked: when pressed save sends data to server for adding new note
+    browser->>server: Text field populated
     activate server
-    save-->>browser: new note can be seen
+    server-->>browser: Clicking save
     deactivate server
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    browser->>server: Sends a user input to the server
     activate server
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
+    server-->>browser: can view in network tab what form looks like
     deactivate server
+
+    browser->>server: Status code 302 can be found
+    activate server
+    server-->>browser: Location is /notes
+    deactivate server
+
+    browser->>server: it is a HTTP post to new_note address
+    activate server
+    server-->>browser: This is a url redirect
+    deactivate server
+
+    
 ```
