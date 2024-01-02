@@ -3,9 +3,9 @@ sequenceDiagram
     participant browser
     participant server
 
-    elements->>body: <form action="/exampleapp/new_note" method="POST">
+    elements->>body: [<form action="/exampleapp/new_note" method="POST">]
     activate server
-    server-->>browser: <input type="text" name="note"><br> <input type="submit" value="Save">
+    server-->>browser: [<input type="text" name="note"><br> <input type="submit" value="Save">]
     deactivate server
 
     box->>written: can write inside text field
