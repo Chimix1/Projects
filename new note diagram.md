@@ -5,10 +5,7 @@ sequenceDiagram
 
     
 
-    box->>written: can write inside text field
-    activate server
-    written-->>browser: after clicking save note is sent to server
-    deactivate server
+    
 
     box->>clicked: when pressed save sends data to server for adding new note
     activate server
