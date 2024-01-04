@@ -42,8 +42,8 @@ const Content = (props) => {
 				<p> {item.name}: {item.exercises}</p>
 			</div>
 		)
-	})
-	
+	}
+  )
 	return lists
 }
 

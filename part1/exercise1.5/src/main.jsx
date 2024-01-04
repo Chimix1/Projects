@@ -2,23 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 const App = () => {
-	const course = {
-		name: 'Half Stack application development',
-		parts: [
-			{
-				name: 'Fundamentals of React',
-				exercises: 10
-			},
-			{
-				name: 'Using props to pass data',
-				exercises: 7
-			},
-			{
-				name: 'State of a component',
-				exercises: 14
-			}
-		]
-	}
+  const course = {
+    name: 'Half Stack application development',
+    parts: [
+      {
+        name: 'Fundamentals of React',
+        exercises: 10
+      },
+      {
+        name: 'Using props to pass data',
+        exercises: 7
+      },
+      {
+        name: 'State of a component',
+        exercises: 14
+      }
+    ]
+  }
 
 	return (
 		<div>
@@ -36,8 +36,8 @@ const Content = (props) => {
 				<p>{item.name}: {item.exercises}</p>
 			</div>
 		)
-	})
-	
+	}
+  )
 	return lists
 }
 
@@ -49,8 +49,8 @@ const Total = (props) => {
 		score = score + item.exercises
 		
 		return score
-	})
-	
+	}
+  )
 	return (
 		<div>
 			<p>Number of exercises: {score}</p>
