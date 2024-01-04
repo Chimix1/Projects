@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>{course}</h1>
+    <h1>{course}</h1>
 	  <p>{part1.name}: {part1.exercises}</p>
 	  <p>{part2.name}: {part2.exercises}</p>
 	  <p>{part3.name}: {part3.exercises}</p>
