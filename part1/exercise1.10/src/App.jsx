@@ -11,7 +11,7 @@ const Total = ({good, neutral, bad}) => {
   if (total === 0) {
 		return (
 			<div>
-				<h4>No Feedback Given Now</h4>
+				<h3>No Feedback Given Now</h3>
 			</div>
 		)
 	} 
@@ -49,6 +49,7 @@ const App = () => {
       <p>Give feedback</p>
       <Button onClick={() => setGood(good + 1)} text="good"/>
         
+      
       <Button onClick={() => setNeutral(neutral + 1)} text="neutral"/>
        
       <Button onClick={() => setBad(bad + 1)} text="bad"/>
