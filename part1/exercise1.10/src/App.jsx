@@ -11,7 +11,7 @@ const Total = ({good, neutral, bad}) => {
   if (total === 0) {
 		return (
 			<div>
-				<h3>No Feedback Given Now</h3>
+				<h4>No Feedback Given Now</h4>
 			</div>
 		)
 	} 
