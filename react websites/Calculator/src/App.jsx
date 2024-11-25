@@ -8,14 +8,16 @@ function App() {
     intialInvestment: 10000,
     annualInvestment: 1200,
     expectedReturn: 6,
-    duration: 10
+    duration: 10,
 });
 
-function handleChange(inputIdentifier ,newValue) {
-  setUserInput(prevUserInput => {
-      return{
+const inputIsValid = userInput.duration >= 1;
+
+function handleChange(inputIdentifier, newValue) {
+  setUserInput((prevUserInput) => {
+      return {
           ...prevUserInput,
-          [inputIdentifier]: +newValue
+          [inputIdentifier]: +newValue,
       };
   });
 }
@@ -23,10 +25,11 @@ function handleChange(inputIdentifier ,newValue) {
   return (
     <>
     <Header/>
-    <Userinput userInput={userInput} onChange={handleChange}/>
-    <Results input={userInput}/>
+    <Userinput userInput={userInput} onChange={handleChange} />
+    {!inputIsValid && <p className="center">Please enter a duration bigger then zero</p>}
+    {inputIsValid && <Results input={userInput} />}
     </>
-  )
+  );
 }
 
 export default App
