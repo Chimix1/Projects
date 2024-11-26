@@ -3,4 +3,5 @@ gunicorn
 python-dotenv
 flask-wtf
 pymongo
+email_validator
 passlib
