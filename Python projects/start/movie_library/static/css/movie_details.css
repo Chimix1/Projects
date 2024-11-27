@@ -106,7 +106,7 @@
     margin-bottom: 2.5rem;
   }
   
-  /* Default layout for larger screens */
+
   .movie__meta {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -116,32 +116,32 @@
     margin-top: 1rem;
   }
   
-  /* Mobile-specific styles */
+
   @media (max-width: 768px) {
     .movie__meta {
-      grid-template-columns: 1fr; /* Stack items vertically */
+      grid-template-columns: 1fr; 
     }
   
     .movie__tags {
-      flex-direction: column; /* Stack tags */
+      flex-direction: column; 
     }
   
     .movie__tag:not(:first-of-type) {
-      margin-left: 0; /* Remove horizontal margin */
-      margin-top: 0.5rem; /* Add vertical spacing instead */
+      margin-left: 0; 
+      margin-top: 0.5rem; 
     }
   
     .header__row {
-      flex-direction: column; /* Stack header items */
-      align-items: flex-start; /* Align to the left */
+      flex-direction: column; 
+      align-items: flex-start; 
     }
     .movie__rating {
-        margin-left: 0.5rem; /* Add spacing between the title and the stars */
+        margin-left: 0.5rem; 
       }
   
     .movie__watched {
-      margin-left: 0; /* Adjust for stacked layout */
-      margin-top: 1rem; /* Add spacing between sections */
+      margin-left: 0; 
+      margin-top: 1rem; 
     }
   }
   

@@ -1,10 +1,12 @@
 import uuid
 import datetime
 import functools
+import os
 from flask import Blueprint, render_template, session, redirect, request, current_app, url_for, flash
 from dataclasses import asdict
-from movie_library.forms import MovieForm, ExtendedMovieForm, RegisterForm, LoginForm
+from movie_library.forms import MovieForm, ExtendedMovieForm, RegisterForm, LoginForm, ProfileForm
 from movie_library.models import Movie, User
+from werkzeug.utils import secure_filename
 from passlib.hash import pbkdf2_sha256
 
 pages = Blueprint(
@@ -23,14 +25,32 @@ def login_required(route):
     return route_wrapper
 
 
-@pages.route("/")
+
+@pages.route("/", methods=["GET", "POST"])
 @login_required
 def index():
     user_data = current_app.db.user.find_one({"email": session["email"]})
     user = User(**user_data)
 
-    movie_data = current_app.db.movie.find({"_id": {"$in": user.movies}})
+    # Get the search term from the request (if any)
+    search_query = request.args.get("search")
+
+    # If there is a search term, filter movies based on it
+    if search_query:
+        # Search by title, director, or any other field you need to filter
+        movie_data = current_app.db.movie.find({
+            "$or": [
+                {"title": {"$regex": search_query, "$options": "i"}},  # Case-insensitive search for title
+                {"director": {"$regex": search_query, "$options": "i"}}  # Case-insensitive search for director
+            ]
+        })
+    else:
+        # No search term, just fetch all movies in the user's list
+        movie_data = current_app.db.movie.find({"_id": {"$in": user.movies}})
+
+    # Convert the movie data to Movie objects
     movies = [Movie(**movie) for movie in movie_data]
+
     return render_template(
         "index.html",
         title="Movies Watchlist",
@@ -48,6 +68,8 @@ def register():
     if form.validate_on_submit():
         user = User(
             _id=uuid.uuid4().hex,
+            name=form.name.data,
+            address=form.address.data,
             email=form.email.data,
             password=pbkdf2_sha256.hash(form.password.data),
         )
@@ -86,6 +108,66 @@ def login():
         flash("Login credentials not correct", category="danger")
 
     return render_template("login.html", title="Movies Watchlist - Login", form=form)
+
+
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+
+def allowed_file(filename):
+    """Check if the file extension is allowed."""
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+@pages.route("/profile", methods=["GET", "POST"])
+@login_required
+def profile():
+    # Fetch the user's data from the database
+    user_data = current_app.db.user.find_one({"email": session["email"]})
+    user = User(**user_data)
+    
+    # Initialize the profile form with the user's existing data
+    form = ProfileForm(obj=user)
+
+    if form.validate_on_submit():
+        # Update user information
+        user.name = form.name.data
+        user.address = form.address.data
+        
+        # Update password only if a new password is provided
+        if form.password.data:
+            user.password = pbkdf2_sha256.hash(form.password.data)
+
+        # Handle profile picture upload if there's a new one
+        if "profile_picture" in request.files:
+            file = request.files["profile_picture"]
+            if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                
+                # Generate a unique filename using UUID to avoid collisions
+                unique_filename = f"{uuid.uuid4().hex}_{filename}"
+                filepath = os.path.join(current_app.config["UPLOAD_FOLDER"], unique_filename)
+
+                # Check if the user already has a profile picture
+                if user.profile_picture:
+                    # Delete the old profile picture file if it exists
+                    old_picture_path = os.path.join(current_app.config["UPLOAD_FOLDER"], user.profile_picture)
+                    if os.path.exists(old_picture_path):
+                        os.remove(old_picture_path)
+
+                # Ensure the upload folder exists
+                if not os.path.exists(current_app.config["UPLOAD_FOLDER"]):
+                    os.makedirs(current_app.config["UPLOAD_FOLDER"])
+
+                # Save the new profile picture
+                file.save(filepath)
+                # Update the user's profile picture field with the new filename
+                user.profile_picture = unique_filename
+
+        # Save the updated user data in the database
+        current_app.db.user.update_one({"_id": user._id}, {"$set": user.to_dict()})
+
+        flash("Profile updated successfully", "success")
+        return redirect(url_for(".profile"))
+    
+    return render_template("profile.html", form=form, title="Update Profile", user=user)
 
 
 @pages.route("/logout")

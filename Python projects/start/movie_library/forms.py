@@ -39,8 +39,29 @@ class ExtendedMovieForm(MovieForm):
     submit = SubmitField("Submit")
 
 class RegisterForm(FlaskForm):
+    name = StringField(
+        "Name",
+        validators=[
+            InputRequired(message="Your name is required."),
+            Length(
+                min=2,
+                max=50,
+                message="Name must be between 2 and 50 characters long.",
+            ),
+        ],
+    )
+    address = TextAreaField(
+        "Address",
+        validators=[
+            InputRequired(message="Your address is required."),
+            Length(
+                max=200,
+                message="Address cannot exceed 200 characters.",
+            ),
+        ],
+    )
     email = StringField("Email", validators=[InputRequired(), Email()])
-
+    
     password = PasswordField(
         "Password",
         validators=[
@@ -69,3 +90,15 @@ class LoginForm(FlaskForm):
     email = StringField("Email", validators=[InputRequired(), Email()])
     password = PasswordField("Password", validators=[InputRequired()])
     submit = SubmitField("Login")
+
+class ProfileForm(FlaskForm):
+    name = StringField("Name", validators=[InputRequired()])
+    email = StringField("Email", render_kw={"readonly": True}, validators=[InputRequired(), Email()])
+    address = StringField("Address", validators=[InputRequired()])
+    password = PasswordField(
+        "New Password (Optional)",
+        validators=[Length(min=4, message="Password must be at least 4 characters long.")],
+    )
+    submit = SubmitField("Save Changes")
+
+    

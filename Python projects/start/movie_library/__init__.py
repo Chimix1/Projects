@@ -14,6 +14,10 @@ def create_app():
     app.config["SECRET_KEY"] = os.environ.get(
         "SECRET_KEY", "pf9Wkove4IKEAXvy-cQkeDPhv9Cb3Ag-wyJILbq_dFw"
     )
+
+    app.config["UPLOAD_FOLDER"] = "static/uploads"
+    app.config["ALLOWED_EXTENSIONS"] = {'png', 'jpg', 'jpeg', 'gif'}
+
     app.db = MongoClient(app.config["MONGODB_URI"]).get_default_database()
 
     app.register_blueprint(pages)
