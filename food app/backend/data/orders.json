@@ -1,1 +1,318 @@
-[]
+[
+    {
+        "customer": {
+            "city": "Espoo",
+            "email": "chiya@live.fi",
+            "name": "Chiya Hekmatyar",
+            "postal-code": "02760",
+            "street": "Joupinmäensyrjä 5 A 3"
+        },
+        "id": "986.287884040989",
+        "items": [
+            {
+                "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+                "id": "m1",
+                "image": "images/mac-and-cheese.jpg",
+                "name": "Mac & Cheese",
+                "price": "8.99",
+                "quantity": 1
+            },
+            {
+                "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+                "id": "m2",
+                "image": "images/margherita-pizza.jpg",
+                "name": "Margherita Pizza",
+                "price": "12.99",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "customer": {
+            "city": "Espoo",
+            "email": "chiya@live.fi",
+            "name": "Chiya Hekmatyar",
+            "postal-code": "02760",
+            "street": "Joupinmäensyrjä 5 A 3"
+        },
+        "id": "12.89131339527505",
+        "items": [
+            {
+                "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+                "id": "m1",
+                "image": "images/mac-and-cheese.jpg",
+                "name": "Mac & Cheese",
+                "price": "8.99",
+                "quantity": 1
+            },
+            {
+                "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+                "id": "m2",
+                "image": "images/margherita-pizza.jpg",
+                "name": "Margherita Pizza",
+                "price": "12.99",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "customer": {
+            "city": "Espoo",
+            "email": "chiya@live.fi",
+            "name": "Chiya Hekmatyar",
+            "postal-code": "02760",
+            "street": "Joupinmäensyrjä 5 A 3"
+        },
+        "id": "761.3296796762041",
+        "items": [
+            {
+                "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
+                "id": "m3",
+                "image": "images/caesar-salad.jpg",
+                "name": "Caesar Salad",
+                "price": "7.99",
+                "quantity": 1
+            },
+            {
+                "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
+                "id": "m5",
+                "image": "images/veggie-burger.jpg",
+                "name": "Veggie Burger",
+                "price": "9.99",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "customer": {
+            "city": "Espoo",
+            "email": "chiya@live.fi",
+            "name": "Chiya Hekmatyar",
+            "postal-code": "02760",
+            "street": "Joupinmäensyrjä 5 A 3"
+        },
+        "id": "801.2441455874668",
+        "items": [
+            {
+                "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
+                "id": "m3",
+                "image": "images/caesar-salad.jpg",
+                "name": "Caesar Salad",
+                "price": "7.99",
+                "quantity": 1
+            },
+            {
+                "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
+                "id": "m5",
+                "image": "images/veggie-burger.jpg",
+                "name": "Veggie Burger",
+                "price": "9.99",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "customer": {
+            "city": "Espoo",
+            "email": "chiya@live.fi",
+            "name": "Chiya Hekmatyar",
+            "postal-code": "02760",
+            "street": "Joupinmäensyrjä 5 A 3"
+        },
+        "id": "847.4868345296329",
+        "items": [
+            {
+                "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
+                "id": "m3",
+                "image": "images/caesar-salad.jpg",
+                "name": "Caesar Salad",
+                "price": "7.99",
+                "quantity": 2
+            },
+            {
+                "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+                "id": "m2",
+                "image": "images/margherita-pizza.jpg",
+                "name": "Margherita Pizza",
+                "price": "12.99",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "customer": {
+            "city": "Espoo",
+            "email": "chiya@live.fi",
+            "name": "Chiya Hekmatyar",
+            "postal-code": "02760",
+            "street": "Joupinmäensyrjä 5 A 3"
+        },
+        "id": "101.00758643440177",
+        "items": [
+            {
+                "description": "A juicy veggie patty served on a whole grain bun with lettuce, tomato, and a tangy sauce.",
+                "id": "m5",
+                "image": "images/veggie-burger.jpg",
+                "name": "Veggie Burger",
+                "price": "9.99",
+                "quantity": 1
+            },
+            {
+                "description": "Al dente spaghetti with a creamy sauce made from egg yolk, pecorino cheese, pancetta, and pepper.",
+                "id": "m4",
+                "image": "images/spaghetti-carbonara.jpg",
+                "name": "Spaghetti Carbonara",
+                "price": "10.99",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "customer": {
+            "city": "Espoo",
+            "email": "chiya@live.fi",
+            "name": "Chiya Hekmatyar",
+            "postal-code": "02760",
+            "street": "Joupinmäensyrjä 5 A 3"
+        },
+        "id": "215.8693030579768",
+        "items": [
+            {
+                "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+                "id": "m1",
+                "image": "images/mac-and-cheese.jpg",
+                "name": "Mac & Cheese",
+                "price": "8.99",
+                "quantity": 1
+            },
+            {
+                "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+                "id": "m2",
+                "image": "images/margherita-pizza.jpg",
+                "name": "Margherita Pizza",
+                "price": "12.99",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "customer": {
+            "city": "Espoo",
+            "email": "chiya@live.fi",
+            "name": "Chiya Hekmatyar",
+            "postal-code": "02760",
+            "street": "Joupinmäensyrjä 5 A 3"
+        },
+        "id": "359.5392045431418",
+        "items": [
+            {
+                "description": "Creamy cheddar cheese mixed with perfectly cooked macaroni, topped with crispy breadcrumbs. A classic comfort food.",
+                "id": "m1",
+                "image": "images/mac-and-cheese.jpg",
+                "name": "Mac & Cheese",
+                "price": "8.99",
+                "quantity": 1
+            },
+            {
+                "description": "A classic pizza with fresh mozzarella, tomatoes, and basil on a thin and crispy crust.",
+                "id": "m2",
+                "image": "images/margherita-pizza.jpg",
+                "name": "Margherita Pizza",
+                "price": "12.99",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "customer": {
+            "city": "Espoo",
+            "email": "chiya@live.fi",
+            "name": "Chiya Hekmatyar",
+            "postal-code": "02760",
+            "street": "Joupinmäensyrjä 5 A 3"
+        },
+        "id": "87.29773623217518",
+        "items": [
+            {
+                "description": "An assortment of fresh sushi rolls including California, Spicy Tuna, and Eel Avocado.",
+                "id": "m8",
+                "image": "images/sushi-roll-platter.jpg",
+                "name": "Sushi Roll Platter",
+                "price": "15.99",
+                "quantity": 1
+            },
+            {
+                "description": "Tender pieces of chicken simmered in a rich and aromatic curry sauce, served with basmati rice.",
+                "id": "m9",
+                "image": "images/chicken-curry.jpg",
+                "name": "Chicken Curry",
+                "price": "13.99",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "customer": {
+            "city": "Espoo",
+            "email": "chibiis088@gmail.com",
+            "name": "Chiya Hekmatyar",
+            "postal-code": "02760",
+            "street": "Joupinmäensyrjä 5 A 3"
+        },
+        "id": "976.6206370260045",
+        "items": [
+            {
+                "description": "Succulent steak cooked to your preference, served with crispy golden fries and herb butter.",
+                "id": "m7",
+                "image": "images/steak-frites.jpg",
+                "name": "Steak Frites",
+                "price": "17.99",
+                "quantity": 1
+            },
+            {
+                "description": "An assortment of fresh sushi rolls including California, Spicy Tuna, and Eel Avocado.",
+                "id": "m8",
+                "image": "images/sushi-roll-platter.jpg",
+                "name": "Sushi Roll Platter",
+                "price": "15.99",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "customer": {
+            "city": "Espoo",
+            "email": "chibiis088@gmail.com",
+            "name": "Chiya Hekmatyar",
+            "postal-code": "02760",
+            "street": "Joupinmäensyrjä 5 A 3"
+        },
+        "id": "996.0506049241194",
+        "items": [
+            {
+                "description": "Tender pieces of chicken simmered in a rich and aromatic curry sauce, served with basmati rice.",
+                "id": "m9",
+                "image": "images/chicken-curry.jpg",
+                "name": "Chicken Curry",
+                "price": "13.99",
+                "quantity": 1
+            },
+            {
+                "description": "An assortment of fresh sushi rolls including California, Spicy Tuna, and Eel Avocado.",
+                "id": "m8",
+                "image": "images/sushi-roll-platter.jpg",
+                "name": "Sushi Roll Platter",
+                "price": "15.99",
+                "quantity": 1
+            },
+            {
+                "description": "Romaine lettuce tossed in Caesar dressing, topped with croutons and parmesan shavings.",
+                "id": "m3",
+                "image": "images/caesar-salad.jpg",
+                "name": "Caesar Salad",
+                "price": "7.99",
+                "quantity": 1
+            }
+        ]
+    }
+]
