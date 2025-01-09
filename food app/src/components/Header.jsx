@@ -29,7 +29,7 @@ export default function Header() {
         
         
         <nav>
-        <Button textOnly onClick={handleShowForum}>Talli ({totalCartItems})</Button>
+        
         <Button textOnly onClick={handleShowCart}>Cart ({totalCartItems})</Button>
         </nav>
     </header>
