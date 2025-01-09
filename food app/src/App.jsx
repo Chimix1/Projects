@@ -21,7 +21,7 @@ function App() {
       <Checkout />
       <NewOpinion />
       <Opinions />
-      </OpinionsContextProvider>
+    </OpinionsContextProvider>
     </CartContextProvider>
     </UserProgressContextProvider>
     
