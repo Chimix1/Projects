@@ -314,5 +314,41 @@
                 "quantity": 1
             }
         ]
+    },
+    {
+        "items": [
+            {
+                "id": "m9",
+                "name": "Chicken Curry",
+                "price": "13.99",
+                "description": "Tender pieces of chicken simmered in a rich and aromatic curry sauce, served with basmati rice.",
+                "image": "images/chicken-curry.jpg",
+                "quantity": 3
+            },
+            {
+                "id": "m12",
+                "name": "Pancake Stack",
+                "price": "8.99",
+                "description": "Fluffy pancakes stacked high, drizzled with maple syrup and topped with fresh berries.",
+                "image": "images/pancake-stack.jpg",
+                "quantity": 1
+            },
+            {
+                "id": "m11",
+                "name": "Seafood Paella",
+                "price": "19.99",
+                "description": "A Spanish delicacy filled with saffron-infused rice, shrimp, mussels, and chorizo.",
+                "image": "images/seafood-paella.jpg",
+                "quantity": 1
+            }
+        ],
+        "customer": {
+            "name": "Kala Mies",
+            "email": "chiya@live.fi",
+            "street": "Joupinmäensyrjä 5 A 3",
+            "postal-code": "02760",
+            "city": "Espoo"
+        },
+        "id": "138.764545212418"
     }
 ]
