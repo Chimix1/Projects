@@ -329,3 +329,69 @@ form button:hover {
   border-color: #f97706;
 }
 
+#opinions ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#opinions li {
+  color: #1d1a16;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #e9decf;
+}
+
+#opinions h3 {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+#opinions header p {
+  margin: 0;
+  color: #938c83;
+  font-size: 0.9rem;
+}
+
+#opinions p {
+  font-size: 1.5rem;
+}
+
+.votes {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  align-items: center;
+}
+
+.votes span {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  color: #f97706;
+  font-weight: bold;
+}
+
+.votes button {
+  padding: 0;
+  color: #a38152;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.votes button:hover {
+  background-color: transparent;
+  border: none;
+  color: #fd9217;
+}
+
+.votes button:disabled,
+.votes button:disabled:hover {
+  color: #c2af93;
+  background-color: transparent;
+  border: none;
+  cursor: not-allowed;
+}
