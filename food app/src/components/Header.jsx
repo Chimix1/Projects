@@ -16,6 +16,10 @@ export default function Header() {
         userProgressCtx.showCart();
     }
 
+    function handleShowForum() {
+        
+    }
+
     return (
     <header id="main-header">
         <div id="title">
@@ -23,7 +27,9 @@ export default function Header() {
             <h1>TALLI</h1>
         </div>
         
+        
         <nav>
+        <Button textOnly onClick={handleShowForum}>Talli ({totalCartItems})</Button>
         <Button textOnly onClick={handleShowCart}>Cart ({totalCartItems})</Button>
         </nav>
     </header>
