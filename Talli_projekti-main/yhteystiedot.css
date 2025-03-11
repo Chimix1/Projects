@@ -1,0 +1,45 @@
+html, body { height: 100%;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+@media screen and (min-width: 576px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        place-items: center;
+        }
+
+    nav a:not(.icon) { display: block; }
+
+    nav a.icon { display: none; }
+
+    .oikea {
+        margin-left: auto;
+        }
+  }
+
+  
+  .left {
+    padding-left: 20px;
+  }
+
+  .form-control {
+    border: 2px solid #007bff; /* Blue border */
+    background-color: #e8f0fe; /* Light blue background */
+    color: #333;
+    padding: 12px;
+  }
+
+  .form-control:focus {
+    border-color: #28a745; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Shadow on focus */
+    background-color: #eaffea; /* Light green background on focus */
+  }
+
+  ::placeholder {
+    color: #6c757d;
+    font-size: 1.1rem; /* Larger placeholder */
+  }

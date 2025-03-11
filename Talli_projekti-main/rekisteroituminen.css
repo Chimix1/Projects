@@ -1,0 +1,174 @@
+
+  
+  h2 {
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  margin-top: 50px;
+  padding: 20px;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Form styling */
+.container form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Form group styling */
+.container .form-group {
+  flex: 1 1 48%; /* Each form group takes about half the width */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields */
+.container .form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.container .form-group input,
+.container .form-group select,
+.container .form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure buttons span the width of the form group */
+.container .form-group button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.container .form-group button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive design: Full-width form groups on smaller screens */
+@media (max-width: 768px) {
+  .container .form-group {
+      flex: 1 1 100%; /* Each form group takes full width on small screens */
+  }
+}
+
+/* Label styling */
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: block;
+}
+
+/* Input and select fields */
+input, select, datalist {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Error message styling */
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 14px;
+  display: none;
+}
+
+/* Error message on invalid fields */
+input:invalid + .invalid-feedback {
+  display: block;
+}
+
+/* Button styling */
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+/* Button hover effect */
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+/* Responsive button */
+@media (max-width: 768px) {
+  button[type="submit"] {
+    padding-top: 30px;
+      width: 100%; /* Full-width button on small screens */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  label {
+      font-size: 14px;
+  }
+
+  input, select, datalist {
+      font-size: 14px;
+      padding: 8px;
+  }
+
+  button[type="submit"] {
+      padding: 8px;
+  }
+}
+
+
+.form-control {
+  border: 2px solid #007bff;
+  background-color: #e8f0fe; 
+  color: #333;
+  padding: 12px;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); 
+  background-color: #eaffea; 
+}
+
+::placeholder {
+  color: #6c757d;
+  font-size: 1.1rem; 
+}

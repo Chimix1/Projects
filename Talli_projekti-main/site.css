@@ -1,0 +1,140 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  background-color: #212529;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  z-index: 1000;
+}
+
+nav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 17px;
+  z-index: 1000;
+}
+
+nav a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav a:not(:first-child) {
+  display: none;
+}
+
+nav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+nav a.active {
+  background-color: #0478aa;
+  color: white;
+}
+
+nav.responsive a {
+  display: block;
+  padding: 14px;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+fieldset {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+legend {
+  font-size: 1.2em;
+  color: #333;
+  float: none;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.nav-link.active {
+  background-color: #0478aa;
+  color: white !important;
+}
+
+.navbar-toggler {
+  outline: none;
+  border: none;
+}
+
+.navbar-brand.nav-link:hover {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 576px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+  }
+
+  nav a:not(.icon) {
+    display: block;
+  }
+
+  nav a.icon {
+    display: none;
+  }
+
+  .oikea {
+    margin-left: auto;
+  }
+}
+
+.content {
+  flex-grow: 1;
+  margin-top: 75px; 
+  padding-bottom: 75px; 
+}
+
+.store {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.store h2 {
+  margin-bottom: 5px;
+}
+
+.store p {
+  margin: 2px 0;
+}
+
+.left {
+  padding-left: 20px;
+}
